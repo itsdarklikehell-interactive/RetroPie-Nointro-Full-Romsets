@@ -1,10 +1,12 @@
 name: CI
 on:
   push:
-    branches: ["master","main"]
+    branches: [main, master]
   pull_request:
-    branches: ["master","main"]
+    branches: [main, master]
   workflow_dispatch:
 jobs:
   ci:
-    uses: itsdarklikehell/ci-templates/.github/workflows/ci-generic.yml@v1
+    uses: itsdarklikehell-interactive/ci-templates/.github/workflows/ci-generic.yml@v1
+    with:
+      docker-build: false
